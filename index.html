@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Generator</title>
+</head>
+<body>
+    <p>
+        Requests should be made in this format:
+        <ul>
+            <li>2 logo,3 nav,etc.</li>
+            <li>logo,link-list,list,link,nav,title,list,search are the only recognized word for now, just as it is spelt.</li>
+            <li>Every space has a meaning, so be mindful of pressing multiple space</li>
+        </ul>
+    </p>
+    <input type="text" id="create-code">
+    <button id="generate">Generator</button>
+    <div id="code"> </div>
+    <script>
+        let createCode = document.getElementById("create-code");
+        const generate = document.getElementById("generate");
+        let codeDisplay = document.getElementById("code");
+        generate.addEventListener('click',function(){
+            let result= "";
+            let codeParameters = createCode.value.split(",");
+            codeParameters.forEach( (codeParameter) => {
+                var verifyNumParameter = /[1-9]\s+\b/i;
+                var verifyWord = /[logo,title,link]/;
+                if(verifyNumParameter.test(codeParameter)){
+                    var getMainParameter = codeParameter.split(" ");
+                    switch(getMainParameter[1]){
+                    case "logo":
+                        for(let i=0;i < getMainParameter[0]; i++)
+                        {
+                            result += `<img src="" width="" height=""/> \n`;
+                        }
+                        break;
+                    case "link-list":
+                        result += `<ul> \n`;
+                        for(let i=0;i < getMainParameter[0]; i++)
+                        {
+                            result +=`<li><a href="">...</a></li> \n`;
+                        }
+                        result += `</ul> \n`;
+                        break;
+                    case "list":
+                        result += `<ul> \n`;
+                        for(let i=0;i < getMainParameter[0]; i++)
+                        {
+                            result +=`<li>...</li> \n`;
+                        }
+                        result += `</ul> \n`;
+                        break;
+                    case "link":
+                        for(let i=0;i < getMainParameter[0]; i++)
+                        {
+                            result +=`<a>...</a> \n`;
+                        }
+                        break;
+                    case "title":
+                        for(let i=0;i < getMainParameter[0]; i++)
+                        {
+                            result +=`<strong>...</strong> \n`;
+                        }
+                        break;
+                    case "search":
+                        for(let i=0;i < getMainParameter[0]; i++)
+                        {
+                            result +=`<input type="text" /> \n`;
+                        }
+                        break;
+                    case "nav":
+                        for(let i=0;i < getMainParameter[0]; i++)
+                        {
+                            result +=`<nav>...</nav> \n`;
+                        }
+                        break;
+                    default:
+                        result = "No Info was found";
+                }
+                }else{
+                    console.log("We can't find it");
+                }
+            })
+            codeDisplay.innerText = result;
+        })
+    </script>
+</body>
+</html>
