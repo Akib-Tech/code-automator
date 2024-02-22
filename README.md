@@ -4,9 +4,11 @@ Helps get the correct html code for common names of website page section
 
 # How to use:
 The application works with restrictions on how to ask question. 
-- You make your request, starting with number and a single space between and the thing you need the application to give you html code for. e.g "4 links". 
+- You make your request, starting with number and a single space between and the thing you need the application to give you html code for. e.g "4 link". 
 
-- If you need code for more than one thing, you will seperate each one with a comma and immediately followed by the next thing e.g "5 links,6 logo,3 nav",etc.
+- If you need code for more than one thing, you will seperate each one with a comma and immediately followed by the next thing e.g "5 link,6 logo,3 nav",etc.
+
+- logo,link-list,list,link,nav,title,list,search are the only recognized word for now, just as it is spelt.
 
 Don't use quote around your request!!!
 
