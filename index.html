@@ -26,7 +26,6 @@
             let codeParameters = createCode.value.split(",");
             codeParameters.forEach( (codeParameter) => {
                 var verifyNumParameter = /[1-9]\s+\b/i;
-                var verifyWord = /[logo,title,link]/;
                 if(verifyNumParameter.test(codeParameter)){
                     var getMainParameter = codeParameter.split(" ");
                     switch(getMainParameter[1]){
@@ -77,10 +76,10 @@
                         }
                         break;
                     default:
-                        result = "No Info was found";
+                        result = "Request not recognised";
                 }
                 }else{
-                    console.log("We can't find it");
+                        result = "Specify the number you want";
                 }
             })
             codeDisplay.innerText = result;
