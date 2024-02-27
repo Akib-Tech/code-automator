@@ -1,7 +1,7 @@
 # code-automator
 Helps get the correct html code for common names of website page section. This program is written both with Javascript and remodified with JAVA
 
-The only recognized features are logo , link-list , list , link , nav , title ,list , search without case sensitivity. But must be spelt the same was as it is here.
+The only recognized features are logo , link-list , list , link , nav , title ,list , search without case insensitivity, but must be spelt the same was as it is here.
 
 # How to use the Javascript aspect:
 The application works with restrictions on how to ask question. 
