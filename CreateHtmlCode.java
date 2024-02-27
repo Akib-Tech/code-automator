@@ -1,14 +1,23 @@
-import java.util.Scanner;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 class CreateHtmlCode {
     public static void main (String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("What header feature do you need (list,link,search): ");
-        String codeRequest = scanner.nextLine();   
-        System.out.print("How many of the "+codeRequest+" code do you need (e.g 1,2,etc): ");
-        int codeNum = scanner.nextInt();
-        String result = "";
-
+         String CONFIG_FILE = "config.properties";
+        Properties properties;
+        properties  = new Properties();
+   
+    try(FileInputStream getConfigFile = new FileInputStream(CONFIG_FILE)){
+        properties.load(getConfigFile);
+    }catch(IOException e){
+        e.printStackTrace();
+    }
+    
+       String codeRequest = properties.getProperty("feature"); 
+       String getNum = properties.getProperty("codenumber");
+       int codeNum = Integer.parseInt(getNum);
+    String result = "";
         switch (codeRequest.toLowerCase()) {
             case "logo":
             for(int i = 0; i < codeNum; i++){
@@ -54,5 +63,7 @@ class CreateHtmlCode {
                 break;
         }
         System.out.println(result);
+       
     }
+    
 }
