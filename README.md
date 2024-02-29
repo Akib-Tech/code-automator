@@ -26,3 +26,5 @@ Note: Work is still ongoing to ensure all this modifications are considered.
 - Another prompt request how many of the code of this feature you are asking of, which can be any numerical number.
 - The result is displayed as the html code you request, if it can't find a feature you requested, it will return "Code not available" 
 
+# Modification in the prompting:
+- Variables to prompt the automator now come from an environment variable, which is contained in the config.properties. It also takes the feature and codenumber.
