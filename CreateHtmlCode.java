@@ -1,23 +1,10 @@
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
-
 class CreateHtmlCode {
     public static void main (String[] args) {
-         String CONFIG_FILE = "config.properties";
-        Properties properties;
-        properties  = new Properties();
-   
-    try(FileInputStream getConfigFile = new FileInputStream(CONFIG_FILE)){
-        properties.load(getConfigFile);
-    }catch(IOException e){
-        e.printStackTrace();
-    }
-    
-       String codeRequest = properties.getProperty("feature"); 
-       String getNum = properties.getProperty("codenumber");
-       int codeNum = Integer.parseInt(getNum);
-    String result = "";
+        if(args.length >= 2){
+        String codeRequest = args[0];
+        String getNum = args[1];
+        int codeNum = Integer.parseInt(getNum);
+        String result = "";
         switch (codeRequest.toLowerCase()) {
             case "logo":
             for(int i = 0; i < codeNum; i++){
@@ -63,6 +50,10 @@ class CreateHtmlCode {
                 break;
         }
         System.out.println(result);
+        }else{
+           System.out.println("Request not found, Recheck...");
+        }
+       
        
     }
     
