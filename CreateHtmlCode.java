@@ -1,8 +1,11 @@
 class CreateHtmlCode {
     public static void main (String[] args) {
-        if(args.length >= 2){
-        String codeRequest = args[0];
-        String getNum = args[1];
+        String headerFeature = System.getenv("HEADER_FEATURE");
+        String featureNumber = System.getenv("CODE_NUMBER");
+        System.out.println("The feature and numbers are : "+ featureNumber + " "+ headerFeature);
+        if((headerFeature != null) && (featureNumber != null)){
+        String codeRequest = headerFeature;
+        String getNum = featureNumber;
         int codeNum = Integer.parseInt(getNum);
         String result = "";
         switch (codeRequest.toLowerCase()) {
@@ -51,7 +54,7 @@ class CreateHtmlCode {
         }
         System.out.println(result);
         }else{
-           System.out.println("Request not found, Recheck...");
+           System.out.println("Variables required not found");
         }
        
        
