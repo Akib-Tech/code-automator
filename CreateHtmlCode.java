@@ -1,8 +1,19 @@
 class CreateHtmlCode {
+   static class Configuration extends CreateHtmlCode {
+        final String FEATURE_NAME = "HEADER_FEATURE";
+        final String CODENUMBER = "CODE_NUMBER";
+        String[] checkConfiguraton(){
+        String checkedConfiguration[] = new String[2] ;
+        checkedConfiguration[0] = System.getenv(FEATURE_NAME);
+        checkedConfiguration[1] = System.getenv(CODENUMBER); 
+        System.out.println(checkedConfiguration[0] + " " + checkedConfiguration[1]);
+        return checkedConfiguration;
+        }
     
+    }
     public static void main (String[] args) {
        Configuration verifyConfiguration = new Configuration();
-       String[] getConfigValue =  verifyConfiguration.checkConfiguraton("HEADER_FEATURE","CODE_NUMBER");                              
+       String[] getConfigValue =  verifyConfiguration.checkConfiguraton();                              
     
        if((getConfigValue[0] != null) && (getConfigValue[1] != null)){
         String codeRequest = getConfigValue[0];
@@ -57,19 +68,7 @@ class CreateHtmlCode {
         }else{
            System.out.println("Variables required not found");
         }
-       
-       
+    
     }
     
-}
-class Configuration extends CreateHtmlCode {
-   String[] checkConfiguraton(String featureName, String codeNumber){
-    String checkedConfiguration[] = new String[2] ;
-        checkedConfiguration[0] = System.getenv(featureName);
-        checkedConfiguration[1] = System.getenv(codeNumber);
-        System.out.println(checkedConfiguration[0]);
-        System.out.println(checkedConfiguration[1]);
-        return checkedConfiguration;
-    }
-
 }
