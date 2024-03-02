@@ -26,5 +26,8 @@ Note: Work is still ongoing to ensure all this modifications are considered.
 - Another prompt request how many of the code of this feature you are asking of, which can be any numerical number.
 - The result is displayed as the html code you request, if it can't find a feature you requested, it will return "Code not available" 
 
-# Modification in the prompting:
-- Variables required for this file to work has to be configured as a system variable. Hence, a system variable for FEATURE_NAME and CODE_NUMBER must be set, for this application to run. 
+#Configuration:  Modification in the prompting:
+- Variables required for this file to work has to be configured as a system variable. Hence, a system variable for FEATURE_NAME and CODE_NUMBER must be set, for this application to run.
+
+#Code Design & Cleaning
+- The code is built with consideration of readability and reuseability. This is achieved with the principle of Object Oriented Programming. Restructuring the code to have classes and method perform specific function will make reviewing the code in later times easy and independent of other functions.
