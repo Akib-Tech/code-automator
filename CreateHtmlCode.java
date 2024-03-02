@@ -67,8 +67,6 @@ class Configuration extends CreateHtmlCode {
     String checkedConfiguration[] = new String[2] ;
         checkedConfiguration[0] = System.getenv(featureName);
         checkedConfiguration[1] = System.getenv(codeNumber);
-        System.out.println(checkedConfiguration[0]);
-        System.out.println(checkedConfiguration[1]);
         return checkedConfiguration;
     }
 
