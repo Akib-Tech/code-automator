@@ -32,3 +32,4 @@ Note: Work is still ongoing to ensure all this modifications are considered.
 #Code Design & Cleaning
 - The code is built with consideration of readability and reuseability. This is achieved with the principle of Object Oriented Programming. Restructuring the code to have classes and method perform specific function will make reviewing the code in later times easy and independent of other functions.
 - The Class that deals with getting the environment variable has been made static with its variable as constant, since it's not going to be changing.
+- The Configuration has been updated to seperate the method for getting codeNumber from that of headerFeature, as against the previous method of returning the two in one method as an array. This is a code Cleaning process.
