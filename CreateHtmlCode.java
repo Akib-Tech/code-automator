@@ -72,3 +72,15 @@ class CreateHtmlCode {
     }
     
 }
+<<<<<<< HEAD
+=======
+class Configuration extends CreateHtmlCode {
+   String[] checkConfiguraton(String featureName, String codeNumber){
+    String checkedConfiguration[] = new String[2] ;
+        checkedConfiguration[0] = System.getenv(featureName);
+        checkedConfiguration[1] = System.getenv(codeNumber);
+        return checkedConfiguration;
+    }
+
+}
+>>>>>>> 41a25ab65b2817e7a23fd80aa070cb50c5e46655
