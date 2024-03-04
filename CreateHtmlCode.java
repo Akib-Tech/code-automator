@@ -6,7 +6,6 @@ class CreateHtmlCode{
         String codeNumber = Configuration.getCodeNumber();                              
      
        if((headerFeature != null) && (codeNumber != null)){
-       
         int intCodeNumber = Integer.parseInt(codeNumber);
         String result = "";
         switch (headerFeature.toLowerCase()) {

@@ -9,7 +9,7 @@ public class Configuration {
         public static String getCodeNumber(){
             return getEnvVariable(CODE_NUMBER);
         }
-        public static String getEnvVariable(String envKey){
+        private static String getEnvVariable(String envKey){
            return System.getenv(envKey);
         }
     }
