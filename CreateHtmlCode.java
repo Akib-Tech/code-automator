@@ -1,22 +1,10 @@
-class CreateHtmlCode {
-   static class Configuration extends CreateHtmlCode {
-    final String HEADER_FEATURE = "HEADER_FEATURE";
-    final String CODE_NUMBER     = "CODE_NUMBER";
-        String getHeaderFeature(){
-            String headerFeature = System.getenv(HEADER_FEATURE);
-            return headerFeature;
-        }
+import config.*;
 
-        String getCodeNumber(){
-            String codeNumber  = System.getenv(CODE_NUMBER);
-            return codeNumber;
-        }
-    }
+class CreateHtmlCode{
     public static void main (String[] args) {
-       Configuration verifyConfiguration = new Configuration();
-       String headerFeature =  verifyConfiguration.getHeaderFeature();
-       String codeNumber = verifyConfiguration.getCodeNumber();                              
-    
+        String headerFeature = Configuration.getHeaderFeature();
+        String codeNumber = Configuration.getCodeNumber();                              
+     
        if((headerFeature != null) && (codeNumber != null)){
        
         int intCodeNumber = Integer.parseInt(codeNumber);
