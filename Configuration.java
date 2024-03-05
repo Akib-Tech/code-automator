@@ -1,5 +1,3 @@
-package config;
-
 public class Configuration {
     static final String HEADER_FEATURE = "HEADER_FEATURE";
     static final String CODE_NUMBER     = "CODE_NUMBER";
@@ -12,4 +10,4 @@ public class Configuration {
         private static String getEnvVariable(String envKey){
            return System.getenv(envKey);
         }
-    }
+}
