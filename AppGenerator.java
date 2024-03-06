@@ -1,3 +1,5 @@
+package codeautomator;
+
 class AppGenerator {
     String generateCode(){
         String headerFeature = Configuration.getHeaderFeature();
