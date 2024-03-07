@@ -13,4 +13,7 @@ public class Configuration {
         private static String getEnvVariable(String envKey){
            return System.getenv(envKey);
         }
+        public static String getFeature(){
+            return getEnvVariable(FEATURE);
+        }
 }
