@@ -1,19 +1,15 @@
 package codeautomator;
 
+//import codeautomator.featuregenerator.Feature;
+
 public class Configuration {
-    static final String HEADER_FEATURE = "HEADER_FEATURE";
-    static final String CODE_NUMBER    = "CODE_NUMBER";
-    static final String FEATURE        = "HEADER";
-        public static String getHeaderFeature(){
-            return getEnvVariable(FEATURE);
+    static final String FEATURES = "HEADER_FEATURE";
+        public static String getFeatures(){
+            return getEnvVariable(FEATURES);
         }
-        public static String getCodeNumber(){
-            return getEnvVariable(CODE_NUMBER);
-        }
+    
         private static String getEnvVariable(String envKey){
            return System.getenv(envKey);
         }
-        public static String getFeature(){
-            return getEnvVariable(FEATURE);
-        }
+       
 }
