@@ -1,5 +1,4 @@
 package codeautomator.featuregenerator;
-
 public class HeaderFeatures implements Feature{
    public String getFeature(String headerFeature,String codeNumber){
     String result = "";
@@ -26,7 +25,7 @@ public class HeaderFeatures implements Feature{
         } 
             result += "</ul>";
             break;
-        case "link":
+        case "links":
         for(int i = 0; i < intCodeNumber; i++){
             result += "<a>...</a> \n";
         } 
@@ -59,3 +58,8 @@ public class HeaderFeatures implements Feature{
 
 
 }
+
+
+
+
+

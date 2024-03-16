@@ -1,18 +1,23 @@
 package codeautomator;
 
 import codeautomator.featuregenerator.HeaderFeatures;
-
-class AppGenerator {
-    String generateCode(){
-       // String headerFeature = Configuration.getHeaderFeature();
-        String codeNumber = Configuration.getCodeNumber();   
-        String feature = Configuration.getFeature();                           
-        HeaderFeatures fetchHeader = new HeaderFeatures();
-        return fetchHeader.getFeature(feature,codeNumber);
-        
-             }
-    }
-
-
-
-
+    
+    class AppGenerator {
+        String generateCode(){
+           // String headerFeature = Configuration.getHeaderFeature();
+            String codeNumber = Configuration.getCodeNumber();   
+            String[] features = Configuration.getFeature().split(",");                           
+            HeaderFeatures fetchHeader = new HeaderFeatures();
+            String result = "";
+            for (String feature : features) {
+              result +=  fetchHeader.getFeature(feature,codeNumber);
+            }
+            
+            return result;
+                 }
+        }
+    
+    
+    
+    
+    
