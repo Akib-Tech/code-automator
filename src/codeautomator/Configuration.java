@@ -1,6 +1,4 @@
 package codeautomator;
-
-
 public class Configuration {
     static final String HEADER_FEATURE = "HEADER_FEATURE";
     static final String CODE_NUMBER    = "CODE_NUMBER";
@@ -11,7 +9,7 @@ public class Configuration {
         public static String getCodeNumber(){
             return getEnvVariable(CODE_NUMBER);
         }
-        public static String getFeature(){
+        public static String getFeatures(){
             return getEnvVariable(FEATURES);
         }
         private static String getEnvVariable(String envKey){

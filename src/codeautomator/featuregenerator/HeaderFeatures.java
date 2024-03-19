@@ -16,14 +16,14 @@ public class HeaderFeatures implements Feature{
         for(int i = 0; i < intCodeNumber; i++){
             result += "<li><a href=\"\">...</a></li> \n";
         } 
-            result += "</ul>";
+            result += "</ul> \n";
             break;
         case "list":
             result += "<ul> \n";
         for(int i = 0; i < intCodeNumber; i++){
             result += "<li>...</li> \n";
         } 
-            result += "</ul>";
+            result += "</ul> \n";
             break;
         case "links":
         for(int i = 0; i < intCodeNumber; i++){

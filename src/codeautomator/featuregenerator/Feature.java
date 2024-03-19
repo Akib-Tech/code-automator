@@ -1,5 +1,6 @@
 package codeautomator.featuregenerator;
 
-public interface Feature{
-   String findTheFeature();
+public interface Feature {
+
+  
 }
