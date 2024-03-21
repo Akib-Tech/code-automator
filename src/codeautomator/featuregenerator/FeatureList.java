@@ -1,11 +1,10 @@
 package codeautomator.featuregenerator;
 import java.util.HashMap;
+import java.util.Map;
 public class FeatureList{
-
-public static String listFeature(String featureName){
-    HashMap <String, Class<?> > HeaderFeatureList = new HashMap<String, Class<?> >();
-    HeaderFeatureList.put("header", HeaderFeatures.class);
-    
-}
-
+   static Map <String, Class<Feature> > featureListMap;
+   static{
+    featureListMap = new HashMap<>();
+    featureListMap.put("header", HeaderFeatures.class);
+   }
 }
